@@ -38,27 +38,32 @@ import sys
 
 
 def miniMaxSum(arr):
-    sum1 = 0
-    sum2 = 0
-    sum3 = 0
-    sum4 = 0
-    sum5 = 0
+    val1 = 0
+    val2 = 0
+    val3 = 0
+    val4 = 0
+    val5 = 0
     minMax_arr = []
 
     for i in arr:
         index = arr.index(i)
-        if index != 0:
-            sum1 = sum1 + i
-        if index != 1:
-            sum2 = sum2 + i
-        if index != 2:
-            sum3 = sum3 + i
-        if index != 3:
-            sum4 = sum4 + i
-        if index != 4:
-            sum5 = sum5 + i
+        if  val1 == 0:
+            val1 = i
+        elif val2 == 0:
+            val2 = i
+        elif val3 == 0:
+            val3 = i
+        elif val4 == 0:
+            val4 = i
+        elif val5 == 0:
+            val5 = i
+    
+    sum1 = val2 + val3 + val4 + val5
+    sum2 = val1 + val3 + val4 + val5
+    sum3 = val1 + val2 + val4 + val5
+    sum4 = val1 + val2 + val3 + val5
+    sum5 = val1 + val2 + val3 + val4
 
-    print(sum2)
     minMax_arr.append(sum1)
     minMax_arr.append(sum2)
     minMax_arr.append(sum3)
@@ -68,18 +73,15 @@ def miniMaxSum(arr):
     max_val = max(minMax_arr)
     min_val = min(minMax_arr)
 
-    print(min_val,max_val)
-
-
+    print(min_val, max_val)
 
 def check_arr_length(arr):
     array_len = len(arr)
-    if array_len > 5:
+    if array_len != 5:
         return False
     else:
         return True
-     
-
+    
 def check_arr(arr):
     counter = 0
     for i in arr:
