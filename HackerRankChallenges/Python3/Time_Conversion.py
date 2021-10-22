@@ -51,7 +51,7 @@ def timeConversion(s):
      if inputTime[0] == "12":
          hh = "00"
      else:
-         hh = str("0" + inputTime[0])
+         hh = str(inputTime[0])
      
      mm = inputTime[1]
      ss = inputTime[2].replace("AM", "")
