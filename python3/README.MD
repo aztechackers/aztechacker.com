@@ -1,3 +1,3 @@
 Aztechacker python3 
 
-Contains python3 programs and scripts not really tied or related to a project. 
+This Section ontains python3 code that I have written that is not tied or related to any project. 
